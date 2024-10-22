@@ -90,18 +90,42 @@ void PrintUpper(string txt)
 {
     Console.WriteLine(txt.ToUpper());
 }
-
+PrintUpper("Tekst Do Druku");
 Console.WriteLine("\n");
 
 Console.WriteLine("Zad11");
+void CreateAndPrintMatrix(int x,int y) 
+{
+    char[,] matrix = new char[x,y];
+    for(int i = 0;i < x; i++) 
+    {
+        for(int j = 0; i<y; j++)
+        {
+            matrix[i, j] = '#';
+        }
+    }
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; i < y; j++)
+        {
+            Console.WriteLine(matrix[i, j]);
+        }
+        Console.WriteLine();
+    }
+
+}
+CreateAndPrintMatrix(10, 10);
+Console.WriteLine("\n");
+
+Console.WriteLine("Zad12");
 string EvenOrOdd1(int toCheck)
 {
     string retStr = "";
-    if(toCheck%2 == 0)
+    if (toCheck % 2 == 0)
     {
         retStr = "Even";
     }
-    else 
+    else
     {
         retStr = "Odd";
     }
@@ -114,9 +138,6 @@ string EvenOrOdd2(int toCheck)
     else
         return "Odd";
 }
-Console.WriteLine("\n");
-
-Console.WriteLine("Zad12");
 Console.WriteLine("\n");
 
 Console.WriteLine("Zad13");
