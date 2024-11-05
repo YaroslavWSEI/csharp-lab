@@ -145,7 +145,7 @@ void WczytajZKlawiatury(out int n, out int m)
 {
     Console.WriteLine("Podaj liczbe n (wiersze): ");
     n = int.Parse(Console.ReadLine());
-    Console.WriteLine("Podaj liczbe m (kolumny): ");
+    Console.WriteLine("Podaj liczbe m (kolumny): ") ;
     m = int.Parse(Console.ReadLine());
 }
 
@@ -181,7 +181,59 @@ void Main()
     char[,] tablica = WypelnijTablice(n, m);
     WyswietlTabliceNaEkran(tablica, n, m);
 }
+Console.WriteLine("Zad 14\n");
 
-Main();
+double a = wpiszLiczbe("Podaj wartość a: ");
+double b = wpiszLiczbe("Podaj wartość b: ");
+double c = wpiszLiczbe("Podaj wartość c: ");
+double[] rozwiazania = rozwiazRownanieKwadratowe(a, b, c);
+wyswietlWyniki(rozwiazania);
+static double wpiszLiczbe(string komunikat)
+{
+    Console.Write(komunikat);
+    return double.Parse(Console.ReadLine());
+}
+static double[] rozwiazRownanieKwadratowe(double a, double b, double c)
+{
+    double d = b * b - 4 * a * c;
+
+    if (d > 0)
+    {
+        double x1 = (-b + Math.Sqrt(d)) / (2 * a);
+        double x2 = (-b - Math.Sqrt(d)) / (2 * a);
+        return new double[] { x1, x2 };
+    }
+    else if (d == 0)
+    {
+        double x = -b / (2 * a);
+        return new double[] { x };
+    }
+    else
+    {
+        return new double[0];
+    }
+}
+static void wyswietlWyniki(double[] rozwiazania)
+{
+    Console.WriteLine("ax^2 + bx + c = 0");
+    Console.WriteLine("Wyniki równania");
+
+    if (rozwiazania.Length == 0)
+    {
+        Console.WriteLine("Brak rozwiązań rzeczywistych");
+    }
+    else if (rozwiazania.Length == 1)
+    {
+        Console.WriteLine($"x={rozwiazania[0],20}");
+    }
+    else
+    {
+        Console.WriteLine($"x1={rozwiazania[0],18}");
+        Console.WriteLine($"x2={rozwiazania[1],18}");
+    }
+}
+
+
+    Main();
 
 Console.WriteLine("\n");
