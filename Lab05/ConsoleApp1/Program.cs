@@ -68,11 +68,11 @@ Console.WriteLine("");
 /* koniec zadanie 2 */
 
 /* Zadanie 3 */
-Person person1 = new Person("John", "Doe", new DateTime(2000, 01, 01), "v525252525@microsoft.edu.pl");
+Person person1 = new Person("John", "Doe", new DateTime(2000, 01, 01), "hhhsddffdgf@microsoft.edu.pl");
 person1.FirstName = "John";
 person1.LastName = "Doe";
 person1.BirthDate = new DateTime(2000, 01, 01);
-person1.EmailAddress = "v525252525@microsoft.edu.pl";
+person1.EmailAddress = "hhhsddffdgf@microsoft.edu.pl";
 Console.WriteLine($"Person number one = {person1.FirstName} {person1.LastName}. Age: {person1.GetAge()} years old. Email: {person1.EmailAddress} .");
 Person person2 = new Person("Bob", "Bob", new DateTime(2008, 02, 04), "bbbb@bob.com");
 if (person1.IsAdult())
