@@ -23,7 +23,7 @@ public class Program
         smsMessenger.Send();
         Console.WriteLine("\n");
         Console.WriteLine("Zadanie 2");
-        IEnumerable<string> stringLetter = new string[] { "Hello my name Viktor", "Wesołych Świąt Bożego Narodzenia", "Happy New year" };
+        IEnumerable<string> stringLetter = new string[] { "Hello my name is Yaroslav", "Wesołych Świąt Bożego Narodzenia", "Happy New year" };
         Console.WriteLine("Letter: ");
         foreach (var item in stringLetter)
         {
@@ -42,7 +42,7 @@ public class Program
         Console.WriteLine($"Is the collection read-only? ---> {stringSMS.IsReadOnly}\n");
 
         Console.WriteLine("<<<Add>>>>");
-        stringSMS.Add("HI,Viktor)");
+        stringSMS.Add("HI,Maks");
         Console.Write("After adding element: ");
         foreach (var item in stringSMS)
         {
