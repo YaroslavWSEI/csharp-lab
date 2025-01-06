@@ -1,41 +1,42 @@
 ﻿using ConsoleApp1;
-
-Animal animal = new Dog();
-Console.WriteLine(animal.Sound);
-animal.Move();
-animal.FetchBall();
-
 Dog dog = new Dog();
 Console.WriteLine(dog.Sound);
 dog.Move();
-dog.FetchBall();
-
+dog.ToString();
 Cat cat = new Cat();
 Console.WriteLine(cat.Sound);
 cat.Move();
-cat.ThrowOfTheTable();
-
-(animal as IWalkable).Walk();
-Dog dog1 = new Dog();
-dog1.Walk();
-IWalkable walkableDog = new Dog();
-walkableDog.Walk();
-
-Animal[]animals =  new Animal[] { new Cat(),new Dog(),new Salmon()};
-
-foreach(Animal ani in animals)
+cat.ToString();
+Salmon salmon = new Salmon();
+Console.WriteLine(salmon.Sound);
+salmon.Move();
+salmon.ToString();
+var animals = new List<object>
 {
-    Console.WriteLine($"The {ani.GetType().Name} goes {ani.Sound}");
-    animal.Move();
+    new Cat(),
+    new Dog(),
+    new Salmon(),
+};
+foreach (Animal ani in animals)
+{
     if (ani is Mammal)
-        (ani as Mammal).ProduceMilk();
+    {
+        (ani as Mammal).ProductMilk();
+    }
     if (ani is IWalkable)
+    {
         (ani as IWalkable).Walk();
+    }
+    if (ani is Dog)
+    {
+        (ani as Dog).FetchBall();
+    }
+    if (ani is Cat)
+    {
+        (ani as Cat).ThrowOfTheTable();
+    }
     if (ani is ISwimmable)
-        (ani is Cat).Swim();
-
-
-
-
-
+    {
+        (ani as ISwimmable).Swim();
+    }
 }

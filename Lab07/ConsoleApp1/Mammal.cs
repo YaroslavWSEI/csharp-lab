@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,11 @@ namespace ConsoleApp1
 {
     public abstract class Mammal : Animal
     {
-        public void ProduceMilk()
-        {
+        public abstract void ProductMilk();
 
+        public override void Move()
+        {
+            Console.WriteLine("Mammal moving...");
         }
     }
 }
