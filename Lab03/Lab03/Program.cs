@@ -12,20 +12,18 @@ do
 } while (k >= 0);
 Console.WriteLine("\n");
 /* Koniec 1 */
-/* zadanie 2 */
+/* zaanie 2 */
 Console.WriteLine("Zadanie 2");
 string hasło;
 Console.Write("\nWpisz hasło: ");
 do
 {
     hasło = Console.ReadLine();
+
 } while (hasło != "koniec");
 Console.WriteLine("\n");
-
 /* koniec 2 */
-
 /* zadanie 3 */
-
 Console.WriteLine("Zadanie 3\n");
 int l = 1;
 Console.WriteLine("Liczby parzyste: ");
@@ -36,23 +34,17 @@ while (l <= 100)
     l++;
 }
 Console.WriteLine("\n");
-
 /* koniec 3 */
-
 /* zadanie 4 */
-
 Console.WriteLine("Zadanie 4\n");
 for (int i = 0; i < 16; i++)
     Console.WriteLine($"Square of {i} equals {i * i}");
 Console.WriteLine("\n");
 /* koniec 4 */
-
 /* zadanie 5,6 */
 Console.WriteLine("Zadanie 5,6\n");
 List<int> numbers = new List<int>() { 4, 25, 35, 42, 55, 78, 99, 101 };
-
 Console.WriteLine("Liczby, które nie są podzielne przez 7:");
-
 for (int i = 0; i < numbers.Count; i++)
 {
     int number = numbers[i];
@@ -63,9 +55,7 @@ for (int i = 0; i < numbers.Count; i++)
     Console.WriteLine(number);
 }
 Console.WriteLine("\n");
-
 /* koniec 5,6*/
-
 /* zadanie 7 */
 Console.WriteLine("Zadanie 7\n");
 double[] dArray = new double[20];
@@ -75,14 +65,10 @@ for (int i = 0; i < 20; i++)
     Console.WriteLine("i: " + dArray[i]);
     Console.WriteLine("\n");
 }
-
 /* koniec 7 */
-
-/* zadanie 8 */
-
+/*zadanie 8 */
 Console.WriteLine("Zadanie 8\n");
 int[,] matrix = new int[3, 4];
-
 int value = 1;
 for (int i = 0; i < 3; i++)
 {
@@ -102,20 +88,15 @@ for (int i = 0; i < 4; i++)
     Console.WriteLine();
 }
 Console.WriteLine("\n");
-
 /* koniec 8 */
-
 /* zadanie 10 */
-
 Console.WriteLine("Zadanie 10\n");
 void printUpperCase(string txt)
 {
     Console.WriteLine(txt.ToUpper());
 }
 printUpperCase("Tekst do druku\n");
-
 /* koniec 10 */
-
 /* Zadanie 11 */
 Console.WriteLine("Zadanie 11\n");
 void createAndPrintMatrix(int X, int Y)
@@ -128,8 +109,6 @@ void createAndPrintMatrix(int X, int Y)
             matrix[i, j] = '#';
         }
     }
-
-    // Wyświetlanie macierzy na ekranie
     for (int i = 0; i < X; i++)
     {
         for (int j = 0; j < Y; j++)
@@ -141,8 +120,8 @@ void createAndPrintMatrix(int X, int Y)
 }
 createAndPrintMatrix(10, 10);
 Console.WriteLine("\n");
-/* koniec 11 */
-/* Zadanie 12 */
+/*koniec11*/
+/*Zadanie12*/
 Console.WriteLine("Zadanie 12");
 string EvenOrOdd1(int toCheck)
 {
@@ -161,9 +140,9 @@ string EvenOrOdd1(int toCheck)
 Console.WriteLine(EvenOrOdd1(3));
 Console.WriteLine(EvenOrOdd1(4));
 Console.WriteLine("\n");
-/* koniec zadania 12*/
-/* Zadanie13*/
-Console.WriteLine("Zadanie 13\n")
+/* koniec12*/
+/*Zadanie 13*/
+Console.WriteLine("Zadanie 13\n");
 int n = wczytajZKlawiatury("n");
 int m = wczytajZKlawiatury("m");
 char[,] tabl = wypełnijTabl(n, m);
@@ -190,7 +169,6 @@ static char[,] wypełnijTabl(int n, int m)
             }
         }
     }
-
     return tabl;
 }
 static void wyswietlTablNaEkran(char[,] tabl)
@@ -208,9 +186,9 @@ static void wyswietlTablNaEkran(char[,] tabl)
     }
 }
 Console.WriteLine("\n");
-/* Zadanie14*/
+/* koniec 13 */
+/*Zadanie 14  */
 Console.WriteLine("Zadanie 14 (domowe)\n");
-
 double a = wpiszLiczbe("Podaj wartość a: ");
 double b = wpiszLiczbe("Podaj wartość b: ");
 double c = wpiszLiczbe("Podaj wartość c: ");
